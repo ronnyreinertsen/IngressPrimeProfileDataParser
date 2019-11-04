@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿//By Ronny Berglihn Reinertsen <ronny@reinertsen.net> 05.11.2019
+using System.Runtime.Serialization;
 using ServiceStack.Text;
 
 namespace FSKristiansandWebLib.Prime

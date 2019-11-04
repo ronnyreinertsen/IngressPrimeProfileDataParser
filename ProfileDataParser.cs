@@ -1,4 +1,5 @@
-﻿using System;
+﻿//By Ronny Berglihn Reinertsen <ronny@reinertsen.net> 05.11.2019
+using System;
 using System.Linq;
 using System.Runtime.Serialization;
 
