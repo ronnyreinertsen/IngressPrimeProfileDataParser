@@ -1,4 +1,4 @@
-﻿//By Ronny Berglihn Reinertsen <ronny@reinertsen.net> 05.11.2019
+//By Ronny Berglihn Reinertsen <ronny@reinertsen.net> 05.11.2019
 using System;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -39,6 +39,9 @@ namespace FSKristiansandWebLib.Prime
 				{	
 					findProperty.SetValue(model, Convert.ChangeType(value, findProperty.PropertyType));
 					return;
+				} else
+				{
+					//Log item not found... We need to add support for it in our AgentStatsModel class
 				}
 
 			}
