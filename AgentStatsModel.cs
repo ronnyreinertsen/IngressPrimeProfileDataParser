@@ -218,6 +218,34 @@ namespace FSKristiansandWebLib.Prime
 		[DataMember(Name = "First Saturday Events")]
 		public long FirstSaturdayEvents { get; set; }
 
+		[FSProfile(Name = "SeerPoints")]
+		[DataMember(Name = "Seer Points")]
+		public long SeerPoints { get; set; }
+
+		[FSProfile(Name = "MissionDaysAttended")]
+		[DataMember(Name = "Mission Day(s) Attended")]
+		public long MissionDaysAttended { get; set; }
+
+		[FSProfile(Name = "NL1331MeetupsAttended")]
+		[DataMember(Name = "NL-1331 Meetup(s) Attended")]
+		public long NL1331MeetupsAttended { get; set; }
+
+		[FSProfile(Name = "ClearFieldsEvents")]
+		[DataMember(Name = "Clear Fields Events")]
+		public long ClearFieldsEvents { get; set; }
+
+		[FSProfile(Name = "OPRLiveEvents")]
+		[DataMember(Name = "OPR Live Events")]
+		public long OPRLiveEvents { get; set; }
+
+		[FSProfile(Name = "PrimeChallenges")]
+		[DataMember(Name = "PrimeChallenges")]
+		public long PrimeChallenges { get; set; }
+
+		[FSProfile(Name = "Recursions")]
+		[DataMember(Name = "Recursions")]
+		public long Recursions { get; set; }
+
 		[FSProfile(Name = "ProfileTimestamp")]
 		[DataMember(Name = "ProfileTimestamp")]
 		public DateTime ProfileTimestamp

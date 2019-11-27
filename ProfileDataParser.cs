@@ -1,6 +1,7 @@
 ﻿//By Ronny Berglihn Reinertsen <ronny@reinertsen.net> 05.11.2019
 using System;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Serialization;
 
 
@@ -53,7 +54,17 @@ namespace FSKristiansandWebLib.Prime
 				 .ToList();
 
 
-			var findProperty = propertiesWithAttribute.Where(p => p.Attribute.Name == propName).FirstOrDefault().Property;
+			PropertyInfo findProperty = null;
+			try
+			{
+				findProperty = propertiesWithAttribute.Where(p => p.Attribute.Name == propName).FirstOrDefault().Property;
+
+			} catch
+			{
+				LogHelper.Warn($"Failed to get property with name: '{propName}' and value: {value}");
+				//ex.Log();
+				return;
+			}
 
 			if (findProperty != null)
 			{
@@ -63,7 +74,7 @@ namespace FSKristiansandWebLib.Prime
 			else
 			{
 				//Log item not found... We need to add support for it in our AgentStatsModel class
-				LogHelper.Warn($"ProfileDataParser>SetField>Missing data column property for '{propName}'");
+				LogHelper.Warn($"ProfileDataParser>SetField>Missing data column property for '{propName}' with value {value}");
 			}
 
 		}
