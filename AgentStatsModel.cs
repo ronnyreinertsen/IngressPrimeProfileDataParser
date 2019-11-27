@@ -239,7 +239,7 @@ namespace FSKristiansandWebLib.Prime
 		public long OPRLiveEvents { get; set; }
 
 		[FSProfile(Name = "PrimeChallenges")]
-		[DataMember(Name = "PrimeChallenges")]
+		[DataMember(Name = "Prime Challenges")]
 		public long PrimeChallenges { get; set; }
 
 		[FSProfile(Name = "Recursions")]
